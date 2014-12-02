@@ -1,24 +1,22 @@
 #!/usr/bin/env python
 
-import sys
-
-
-def main(n):
-    z = [x for x in range(1,int(n))]
-    print(str(z))
-    a = 0
-    for i in z:
+def main():
+    n = 0
+    c = 0
+    while n < 200000000000:
         y = []
-        a += i
-        b = a
-        while b > 0:        
-            if a % b == 0:
+        n += 1
+        c += n
+        b = c
+        while b > 0:
+            if c % b == 0:
                 y.append(b)
-                b -= 1
-        print(str(y))
-#        if len(y) == 5:
-#            print(str(i)+' has 20 factors')
-    return y
+            b -= 1
+        print(str(n)+' '+str(len(y))+' '+str(c))
+        if len(y) >= 500:
+            print('Found it, its '+str(c))
+            break
+    return c
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main()

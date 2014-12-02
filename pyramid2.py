@@ -35,7 +35,7 @@ def main():
                    r += 1
             print(str(k))   
         if s == 14: 
-            print('check')
+#            print('check')
             o = l[-1]
             m = o.split()  
             a = int(m[r])

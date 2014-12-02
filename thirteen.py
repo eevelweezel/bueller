@@ -11,7 +11,7 @@ def main(thing):
     with open(thing, 'r') as f:
         w = f.readline()
 #        print(str(w))
-        j = re.finditer('(?=(\d{13}))',w)  # only finding 3 sequences per line.
+        j = re.finditer('(?=(\d{13}))',w)  
         k = [(match.group(1)) for match in j]
 #        print(str(k))
         for m in k:
