@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
+
 def main():
     n = 0
     c = 0
     while n < 200000000000:
-        y = []
         n += 1
+        y = [1,n]
         c += n
-        b = c
-        while b > 0:
+        b = int(c/2)+1
+        while b > 1:
             if c % b == 0:
                 y.append(b)
             b -= 1
